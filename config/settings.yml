@@ -8,3 +8,5 @@ validate:
     min_length: 6
   post:
     max_length: 140
+remember_me: "1"
+paging: "10"

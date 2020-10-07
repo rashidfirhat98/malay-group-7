@@ -1,3 +1,6 @@
+other:
+  gravatar_email: "http://gravatar.com/emails"
+
 validate:
   name:
     max_length: 50
@@ -10,3 +13,4 @@ validate:
     max_length: 140
 remember_me: "1"
 paging: "10"
+password_expired_time: 1

@@ -11,6 +11,13 @@ validate:
     min_length: 6
   post:
     max_length: 140
+  course_name:
+    max_length: 255
+
 remember_me: "1"
-paging: "10"
+
+paging: 
+  user: "10"
+  course: "5"
+
 password_expired_time: 1

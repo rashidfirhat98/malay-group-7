@@ -1,0 +1,18 @@
+<div class="row">
+  <aside class="col-md-4">
+    <section class="user_info">       
+        <h1>
+          <%= link_to course.name, course %>
+          <h6>
+            Status: <%= course.status %>
+          </h6>
+        </h1>  
+        <div>
+          <% if current_user.admin? %>
+            |  <%= link_to "edit", edit_course_path(course) %>  |   
+            <%= link_to "delete", course, method: :delete, data: {confirm: "You sure?"} %>
+          <% end %>
+        </div>
+    </section>
+  </aside>
+</div> 

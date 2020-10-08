@@ -3,14 +3,19 @@ git_source(:github){|repo|"https://github.com/#{repo}.git"}
 
 ruby "2.7.1"
 
+gem "active_storage_validations"
 gem "bcrypt", "~> 3.1.15"
 gem "bootsnap", ">= 1.4.2", require: false
 gem "bootstrap-sass"
-gem "faker", "1.7.3"
 gem "config"
+gem "faker", "1.7.3"
 gem "figaro"
+gem "image_processing"
 gem "jbuilder", "~> 2.7"
 gem "jquery-rails"
+gem "kaminari"
+gem "kaminari-bootstrap"
+gem "mini_magick"
 gem "mysql2"
 gem "puma", "~> 4.1"
 gem "rails", "~> 6.0.3", ">= 6.0.3.2"
@@ -18,8 +23,6 @@ gem "rails-i18n"
 gem "sass-rails", ">= 6"
 gem "turbolinks", "~> 5"
 gem "webpacker", "~> 4.0"
-gem "kaminari"
-gem "kaminari-bootstrap"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]

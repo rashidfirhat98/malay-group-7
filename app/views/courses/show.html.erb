@@ -1,0 +1,48 @@
+<% provide :title, @course.name %>
+
+<h1>Course Info</h1>
+
+<div class="row">
+  <aside class="col-md-4">
+  
+    <section class="user_info">
+      <h2>
+        <P>
+          <strong>
+          <%= @course.name %>
+          </strong>
+        </P>
+      </h2>  
+      <h1>
+        <p>
+          <strong>Status: </strong>  
+          <%= @course.status %>  
+        </p>
+        <p>
+          <strong>Starting date: </strong>
+          <%= @course.started_at %>  
+        </p>
+        <p>
+          <strong>Capacity: </strong>
+          <%= @course.total_member %> student(s) 
+        </p>
+        <p>
+          <strong>Duration: </strong>
+          <%= @course.total_month %> month(s)
+        </p>
+        <p>
+          <strong>Description: </strong>
+          <%= @course.description %> 
+        </p>
+      </h1>
+    </section>
+  </aside>
+</div> 
+
+<div>
+  <% if current_user.admin? %>
+    <%= link_to "Edit course", edit_course_path %> |
+  <% end %>
+
+  <%= link_to "Back", courses_path %>
+</div>
